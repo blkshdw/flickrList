@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="00S-cg-vyF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Фотография-->
+        <scene sceneID="ycR-sH-kux">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" title="Фотография" extendedLayoutIncludesOpaqueBars="YES" id="00S-cg-vyF" customClass="PhotoPreviewViewController" customModule="FlickrList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FHc-6a-sfn"/>
+                        <viewControllerLayoutGuide type="bottom" id="zBt-1h-yxQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n97-NZ-8Ca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-jt-Iqw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zBm-jt-Iqw" firstAttribute="top" secondItem="FHc-6a-sfn" secondAttribute="bottom" id="6T5-u3-IiX"/>
+                            <constraint firstItem="zBm-jt-Iqw" firstAttribute="leading" secondItem="n97-NZ-8Ca" secondAttribute="leading" id="DI8-Mf-MpB"/>
+                            <constraint firstItem="zBt-1h-yxQ" firstAttribute="top" secondItem="zBm-jt-Iqw" secondAttribute="bottom" id="SDt-4k-Pp2"/>
+                            <constraint firstAttribute="trailing" secondItem="zBm-jt-Iqw" secondAttribute="trailing" id="hZh-l7-cjZ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nui-A2-iRa" appends="YES" id="Jl9-GT-CF4"/>
+                        </connections>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="photoPreview" destination="zBm-jt-Iqw" id="y7i-Nv-jrf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhd-Tn-dLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="SLU-Fc-9c9"/>
+                <tapGestureRecognizer id="Nui-A2-iRa">
+                    <connections>
+                        <action selector="viewDidTap:" destination="00S-cg-vyF" id="ACY-d2-pWF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="244" y="251"/>
+        </scene>
+    </scenes>
+</document>
